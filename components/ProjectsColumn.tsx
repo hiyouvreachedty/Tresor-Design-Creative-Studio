@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Project } from '../data/projects';
 import TradingViewWidget from './TradingViewWidget';
 
@@ -6,6 +6,7 @@ interface ProjectsColumnProps {
   projects: Project[];
   activeProject: Project | null;
   onProjectHover: (project: Project) => void;
+  onExpansionChange: () => void;
 }
 
 const ProjectExpansionDetail: React.FC<{ project: Project }> = ({ project }) => {
@@ -26,12 +27,19 @@ const ProjectExpansionDetail: React.FC<{ project: Project }> = ({ project }) => 
 };
 
 
-const ProjectsColumn: React.FC<ProjectsColumnProps> = ({ projects, activeProject, onProjectHover }) => {
+const ProjectsColumn: React.FC<ProjectsColumnProps> = ({ projects, activeProject, onProjectHover, onExpansionChange }) => {
   const [expandedProjectId, setExpandedProjectId] = useState<number | null>(null);
 
   const handleToggleExpand = (projectId: number) => {
     setExpandedProjectId(prevId => (prevId === projectId ? null : projectId));
   };
+
+  useEffect(() => {
+    if (onExpansionChange) {
+      onExpansionChange();
+    }
+  }, [expandedProjectId, onExpansionChange]);
+
 
   return (
     <div className="px-4 md:px-6">

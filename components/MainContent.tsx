@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import AboutColumn from './AboutColumn';
 import ProjectsColumn from './ProjectsColumn';
 import ProjectDetailColumn from './ProjectDetailColumn';
@@ -22,6 +22,7 @@ const MainContent: React.FC = () => {
   const aboutColRef = useRef<HTMLDivElement>(null);
   const projectsColRef = useRef<HTMLDivElement>(null);
   const detailColRef = useRef<HTMLDivElement>(null);
+  const lenisInstancesRef = useRef<any[]>([]);
 
   useEffect(() => {
     const Lenis = window.Lenis;
@@ -30,7 +31,7 @@ const MainContent: React.FC = () => {
       return;
     }
     
-    const lenisInstances: any[] = [];
+    const newLenisInstances: any[] = [];
     
     [aboutColRef, projectsColRef, detailColRef].forEach(ref => {
       if (ref.current) {
@@ -40,15 +41,18 @@ const MainContent: React.FC = () => {
           // This makes the scroll feel a bit more fluid.
           lerp: 0.08,
         });
-        lenisInstances.push(lenis);
+        newLenisInstances.push(lenis);
+      } else {
+        newLenisInstances.push(null); // Keep indices correct
       }
     });
+    lenisInstancesRef.current = newLenisInstances;
 
-    if (lenisInstances.length === 0) return;
+    if (newLenisInstances.every(i => i === null)) return;
 
     let animationFrameId: number;
     function raf(time: number) {
-      lenisInstances.forEach(lenis => lenis.raf(time));
+      newLenisInstances.forEach(lenis => lenis?.raf(time));
       animationFrameId = requestAnimationFrame(raf);
     }
 
@@ -56,8 +60,21 @@ const MainContent: React.FC = () => {
 
     return () => {
       cancelAnimationFrame(animationFrameId);
-      lenisInstances.forEach(lenis => lenis.destroy());
+      newLenisInstances.forEach(lenis => lenis?.destroy());
+      lenisInstancesRef.current = [];
     };
+  }, []);
+
+  const handleProjectsColumnExpansionChange = useCallback(() => {
+    // Wait for the animation to finish before resizing.
+    const resizeTimer = setTimeout(() => {
+        const projectsColumnLenis = lenisInstancesRef.current[1];
+        if (projectsColumnLenis) {
+            projectsColumnLenis.resize();
+        }
+    }, 550); // The transition is 500ms
+
+    return () => clearTimeout(resizeTimer);
   }, []);
 
   return (
@@ -71,6 +88,7 @@ const MainContent: React.FC = () => {
             projects={projects} 
             activeProject={activeProject} 
             onProjectHover={setActiveProject}
+            onExpansionChange={handleProjectsColumnExpansionChange}
           />
         </div>
         <div ref={detailColRef} className="hidden md:block relative py-6 overflow-y-auto custom-scrollbar">

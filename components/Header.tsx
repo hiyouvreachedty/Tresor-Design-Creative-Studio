@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 
 const marqueePhrases = [
-  "Design Everything", "Adopt New Realities", "Use Your Headlights", "Make It Matter",
-  "Rally Others On", "Choose the Future", "Seek Out Shadows", "Reverse Engineer with Curiosity",
-  "Garner Conviction", "Dream Without Limits"
+  "01 Design Everything", "02 Adopt New Realities", "03 Use Your Headlights", "04 Make It Matter",
+  "05 Rally Others On", "06 Choose the Future", "07 Seek Out Shadows", "08 Reverse Engineer",
+  "09 Garner Conviction", "10 Dream Without Limits"
 ];
+
 
 const MarqueeContent: React.FC = () => (
   <div className="flex-shrink-0 flex items-center">
     {marqueePhrases.map((phrase, index) => (
       <React.Fragment key={index}>
-        <span className="px-4 text-xs tracking-wider font-black uppercase">{phrase}</span>
-        <span className="px-4 text-xs tracking-wider font-black text-gray-500">//</span>
+        <span className="px-4 text-sm tracking-wider font-black uppercase font-mono">{phrase}</span>
+        <span className="px-4 text-sm tracking-wider font-black uppercase font-mono">//</span>
       </React.Fragment>
     ))}
   </div>
