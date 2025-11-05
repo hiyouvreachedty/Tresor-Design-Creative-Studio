@@ -173,6 +173,9 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
           .spinner1 div:nth-child(7) { transform: translate(-50%, -5.4px) rotate(360deg) translate(0, 320%); }
 
           @keyframes spinner1-anim {
+            from {
+              transform: rotate(0deg);
+            }
             to {
               transform: rotate(360deg);
             }
@@ -211,32 +214,32 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
           /* Spinner 3 animation */
           .spinner3 {
             position: relative;
-            width: 28px;
-            height: 28px;
+            width: 20px;
+            height: 20px;
             transform: rotate(45deg);
             overflow: hidden;
           }
           .spinner3:after{
             content: '';
             position: absolute;
-            inset: 4px;
+            inset: 3px;
             margin: auto;
             background: var(--color-background);
           }
           .spinner3:before{
             content: '';
             position: absolute;
-            inset: -8px;
+            inset: -6px;
             margin: auto;
             background: var(--color-neon-green);
             animation: spinner3-anim 2s linear infinite;
           }
           @keyframes spinner3-anim {
             0%,10% {
-              transform: translate(-32px, -32px) rotate(-45deg)
+              transform: translate(-23px, -23px) rotate(-45deg)
             }
             90%,100% {
-              transform: translate(32px, 32px) rotate(-45deg)
+              transform: translate(23px, 23px) rotate(-45deg)
             }
           }
         `}</style>
