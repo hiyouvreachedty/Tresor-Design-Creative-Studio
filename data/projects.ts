@@ -9,6 +9,7 @@ export interface Project {
   description: string;
   highlights: string[];
   tickerSymbol?: string;
+  url?: string;
   mediaLinks?: { 
     title: string; 
     url: string; 
@@ -27,7 +28,8 @@ export const projects: Project[] = [
     image1: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=75', 
     image2: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=75',
     description: 'Developed a comprehensive brand identity and digital presence for a modern immigration consultancy. The goal was to create a trustworthy, accessible, and professional platform to guide clients through complex immigration processes.',
-    highlights: ['Full brand identity system from logo to typography.', 'Custom website build with a client-friendly CMS.', 'SEO strategy and Google Suite integration for lead generation.']
+    highlights: ['Full brand identity system from logo to typography.', 'Custom website build with a client-friendly CMS.', 'SEO strategy and Google Suite integration for lead generation.'],
+    url: 'https://newtierraimmigration.ca'
   },
   { 
     id: 2, 
@@ -38,7 +40,8 @@ export const projects: Project[] = [
     image1: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=75', 
     image2: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=75',
     description: 'Led a UI/UX research initiative to adapt a global platform for the Latin American market. This project involved extensive user research, cultural analysis, and iterative design to ensure the product resonated with local user behaviors and expectations.',
-    highlights: ['Conducted 50+ user interviews across 3 countries.', 'Developed culturally-specific user personas and journey maps.', 'Designed and prototyped localized UI patterns, increasing engagement by 30%.']
+    highlights: ['Conducted 50+ user interviews across 3 countries.', 'Developed culturally-specific user personas and journey maps.', 'Designed and prototyped localized UI patterns, increasing engagement by 30%.'],
+    url: 'https://cismlatinamerica.ca/'
   },
   { 
     id: 3, 
@@ -49,7 +52,8 @@ export const projects: Project[] = [
     image1: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=75', 
     image2: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=75',
     description: 'Architected and developed a large-scale enterprise website for a major surfaces manufacturer. The project required a robust, scalable architecture to manage over 2,000 product pages, technical documents, and regional content variations.',
-    highlights: ['Built on a headless architecture for maximum flexibility and performance.', 'Implemented a powerful search and filtering system for a vast product catalog.', 'Automated content migration from legacy systems, saving hundreds of man-hours.']
+    highlights: ['Built on a headless architecture for maximum flexibility and performance.', 'Implemented a powerful search and filtering system for a vast product catalog.', 'Automated content migration from legacy systems, saving hundreds of man-hours.'],
+    url: 'https://surfacesbyrtb.com'
   },
   { 
     id: 4, 
@@ -92,7 +96,8 @@ export const projects: Project[] = [
     image1: 'https://images.unsplash.com/photo-1639754502599-565b934032a3?auto=format&fit=crop&w=800&q=75', 
     image2: 'https://images.unsplash.com/photo-1642104792689-49b1a755d81b?auto=format&fit=crop&w=800&q=75',
     description: 'Produced a series of promotional videos and design assets for a pioneering project at the intersection of cryptocurrency and fine art. The campaign aimed to demystify NFTs and attract a new wave of collectors to the digital art space.',
-    highlights: ['Created a viral video campaign that garnered over 1 million views.', 'Designed a cohesive visual identity across social media and web platforms.', 'Collaborated with renowned digital artists to showcase the platform\'s potential.']
+    highlights: ['Created a viral video campaign that garnered over 1 million views.', 'Designed a cohesive visual identity across social media and web platforms.', 'Collaborated with renowned digital artists to showcase the platform\'s potential.'],
+    url: 'https://particlecollection.com'
   },
   { 
     id: 6, 
@@ -119,6 +124,24 @@ export const projects: Project[] = [
       'Negotiation Coach: Built-in "10 Commandments of Client Mastery" with real-world examples for various professions.',
       'Performance Journal: A 90-day "Striker System" for tracking daily focus, gratitude, KPIs, and quarterly reflection.',
       'Designed to fix the three main failure points for freelancers: lack of follow-up, undercharging, and burnout.'
-    ]
+    ],
+    url: 'https://client-mastery-suite-0562991d.base44.app'
+  },
+  { 
+    id: 8, 
+    name: 'AI-Powered Drive', 
+    type: 'Full-Stack', 
+    year: '2024', 
+    focus: 'React, Gemini API, Drive API', 
+    image1: 'https://images.unsplash.com/photo-1585933646706-7b42967a4da2?auto=format&fit=crop&w=800&q=75', 
+    image2: 'https://images.unsplash.com/photo-1611095965923-893a73a39e3c?auto=format&fit=crop&w=800&q=75',
+    description: 'A full-stack Google Drive clone supercharged with AI capabilities. This application allows users to manage their files and folders, with the added power of Gemini to perform smart actions like summarizing documents, generating content, and answering questions about their files.',
+    highlights: [
+      'Secure file upload, storage, and organization.',
+      'Integration with Google Drive API for seamless file management.',
+      'AI-powered features using the Gemini API for content analysis and generation.',
+      'Modern, responsive interface built with React and Tailwind CSS.'
+    ],
+    url: 'https://ai.studio/apps/drive/1gIZ5GkEjwOPh1rebSFeSrgAaFX-_NyWP'
   }
 ];

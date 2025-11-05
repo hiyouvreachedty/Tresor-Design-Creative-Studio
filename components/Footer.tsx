@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
           <a href="mailto:HELLO@TRESORDESIGN.COM" className="hover:text-white transition-colors">E: DEAR@TRESORDESIGN.COM</a>
         </div>
         <div className="flex items-end gap-4 text-sm text-gray-500">
-          <span>V.00.00.08</span>
+          <span>V.00.00.09</span>
           <span>&copy; 2025</span>
         </div>
       </div>

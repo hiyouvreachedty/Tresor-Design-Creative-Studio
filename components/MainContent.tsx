@@ -5,6 +5,7 @@ import ProjectDetailColumn from './ProjectDetailColumn';
 import { projects, Project } from '../data/projects';
 import ProjectModal from './ProjectModal';
 import AboutMeModal from './AboutMeModal';
+import ImageModal from './ImageModal';
 
 declare global {
   interface Window {
@@ -15,6 +16,7 @@ declare global {
 const MainContent: React.FC = () => {
   const [activeProject, setActiveProject] = useState<Project | null>(projects[0]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [enlargedProject, setEnlargedProject] = useState<Project | null>(null);
   const [isAboutMeOpen, setIsAboutMeOpen] = useState(false);
 
   const aboutColRef = useRef<HTMLDivElement>(null);
@@ -68,14 +70,14 @@ const MainContent: React.FC = () => {
           <ProjectsColumn 
             projects={projects} 
             activeProject={activeProject} 
-            onProjectHover={setActiveProject} 
-            onProjectClick={setSelectedProject}
+            onProjectHover={setActiveProject}
           />
         </div>
         <div ref={detailColRef} className="relative py-6 overflow-y-auto custom-scrollbar">
           <ProjectDetailColumn 
             project={activeProject} 
             onInfoClick={() => activeProject && setSelectedProject(activeProject)} 
+            onEnlargeClick={() => activeProject && setEnlargedProject(activeProject)}
           />
         </div>
       </main>
@@ -84,6 +86,13 @@ const MainContent: React.FC = () => {
         <ProjectModal 
           project={selectedProject} 
           onClose={() => setSelectedProject(null)} 
+        />
+      )}
+
+      {enlargedProject && (
+        <ImageModal
+          project={enlargedProject}
+          onClose={() => setEnlargedProject(null)}
         />
       )}
 
