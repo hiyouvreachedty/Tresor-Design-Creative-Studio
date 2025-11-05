@@ -3,7 +3,7 @@ import React from 'react';
 const Hero: React.FC = () => {
   return (
     <section className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden py-20 -mx-4 md:-mx-6 lg:-mx-8">
-        <div className="absolute inset-0 z-0 opacity-30 bg-black">
+        <div className="absolute inset-0 z-0 opacity-30 bg-[#0D1117]">
             <video
                 autoPlay
                 loop

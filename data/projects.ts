@@ -105,4 +105,20 @@ export const projects: Project[] = [
     description: 'Designed and prototyped a SaaS application specifically for tattoo artists. InkFlow is a CRM and content management system that streamlines booking, client management, and portfolio showcasing, allowing artists to focus on their craft.',
     highlights: ['User-centric design based on interviews with 20+ tattoo artists.', 'AI-powered caption generation for social media posts.', 'Integrated scheduling and deposit system to reduce no-shows.']
   },
+  { 
+    id: 7, 
+    name: 'Client Mastery Suite', 
+    type: 'SaaS', 
+    year: '2024', 
+    focus: 'CRM, Performance Journal, Negotiation Coach', 
+    image1: 'https://images.unsplash.com/photo-1587440871875-191322ee64b0?auto=format&fit=crop&w=800&q=75', 
+    image2: 'https://images.unsplash.com/photo-1629904853716-f0bc54eea481?auto=format&fit=crop&w=800&q=75',
+    description: "Client Mastery Suite is a personal operating system for freelancers, tattoo artists, and trainers who treat their craft like a business. It's a discipline engine disguised as a CRM, built on the philosophy that solo operators need to track their own energy, understand their value, and follow up consistently to succeed. The app is designed for professionals who see themselves as craftsmen, with a dark mode, matte black, and gold accented UI that feels like a high-end notebook meets a performance dashboard.",
+    highlights: [
+      'Smart CRM: Track every client from lead to close with confidence meters, budget tracking, and category filtering.',
+      'Negotiation Coach: Built-in "10 Commandments of Client Mastery" with real-world examples for various professions.',
+      'Performance Journal: A 90-day "Striker System" for tracking daily focus, gratitude, KPIs, and quarterly reflection.',
+      'Designed to fix the three main failure points for freelancers: lack of follow-up, undercharging, and burnout.'
+    ]
+  }
 ];

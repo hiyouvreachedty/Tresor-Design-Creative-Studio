@@ -3,7 +3,7 @@ import React from 'react';
 
 const CTA: React.FC = () => {
   return (
-    <section className="py-20 md:py-40 bg-black text-center">
+    <section className="py-20 md:py-40 text-center">
       <div className="container mx-auto px-4 md:px-8">
         <h2 className="text-4xl sm:text-6xl md:text-7xl font-extrabold uppercase tracking-tighter leading-none mb-8">
           Have a project in mind?

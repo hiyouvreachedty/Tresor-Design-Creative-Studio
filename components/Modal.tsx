@@ -13,7 +13,7 @@ const Modal: React.FC<ModalProps> = ({ onClose, children, maxWidth = 'max-w-4xl'
       onClick={onClose}
     >
       <div 
-        className={`bg-[#111] border border-white/10 rounded-xl w-full ${maxWidth} max-h-[90vh] flex flex-col animate-scale-in`}
+        className={`bg-[#161B22] border border-white/10 rounded-xl w-full ${maxWidth} max-h-[90vh] flex flex-col animate-scale-in`}
         onClick={(e) => e.stopPropagation()}
       >
         {children}

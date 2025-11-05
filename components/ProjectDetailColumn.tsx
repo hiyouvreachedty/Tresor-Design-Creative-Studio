@@ -28,7 +28,7 @@ const ProjectDetailColumn: React.FC<ProjectDetailColumnProps> = ({ project, onIn
               )}
             </div>
           </div>
-          <div className="mt-auto flex justify-between items-center p-2 bg-black/20 rounded-lg backdrop-blur-sm border border-white/10">
+          <div className="mt-auto flex justify-between items-center p-2 bg-[#0D1117]/20 rounded-lg backdrop-blur-sm border border-white/10">
             <button className="flex items-center space-x-2 text-sm text-gray-300">
               <span className="border border-gray-500 w-5 h-5 flex items-center justify-center">+</span>
               <span>ENLARGE</span>

@@ -6,7 +6,7 @@ const services = ["Branding", "Web Design", "Development", "Strategy", "Art Dire
 
 const Intro: React.FC = () => {
   return (
-    <section className="py-20 md:py-32 bg-[#111111]">
+    <section className="py-20 md:py-32 bg-[#161B22]">
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-2xl md:text-4xl leading-relaxed text-gray-300">

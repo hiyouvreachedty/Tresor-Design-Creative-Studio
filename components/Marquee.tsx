@@ -20,8 +20,8 @@ const MarqueeItem: React.FC = () => (
 const Marquee: React.FC = () => {
   return (
     <div className="relative mt-24 w-full overflow-hidden">
-      <div className="absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-[#111111]"></div>
-      <div className="absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-[#111111]"></div>
+      <div className="absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-[#161B22]"></div>
+      <div className="absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-[#161B22]"></div>
       <div className="flex animate-marquee">
         <MarqueeItem />
         <MarqueeItem />
