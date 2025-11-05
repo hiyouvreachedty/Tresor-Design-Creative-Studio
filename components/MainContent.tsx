@@ -1,39 +1,98 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import AboutColumn from './AboutColumn';
 import ProjectsColumn from './ProjectsColumn';
 import ProjectDetailColumn from './ProjectDetailColumn';
 import { projects, Project } from '../data/projects';
+import ProjectModal from './ProjectModal';
+import AboutMeModal from './AboutMeModal';
+
+declare global {
+  interface Window {
+    Lenis: any;
+  }
+}
 
 const MainContent: React.FC = () => {
   const [activeProject, setActiveProject] = useState<Project | null>(projects[0]);
-  const projectDetailRef = useRef<HTMLDivElement>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isAboutMeOpen, setIsAboutMeOpen] = useState(false);
 
-  const handleProjectClick = (project: Project) => {
-    setActiveProject(project);
-    // 'md' breakpoint in Tailwind CSS is 768px.
-    // We only want to scroll on mobile where columns are stacked.
-    if (window.innerWidth < 768) {
-      projectDetailRef.current?.scrollIntoView();
+  const aboutColRef = useRef<HTMLDivElement>(null);
+  const projectsColRef = useRef<HTMLDivElement>(null);
+  const detailColRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const Lenis = window.Lenis;
+    if (!Lenis) {
+      console.error("Lenis not found");
+      return;
     }
-  };
+    
+    const lenisInstances: any[] = [];
+    
+    [aboutColRef, projectsColRef, detailColRef].forEach(ref => {
+      if (ref.current) {
+        const lenis = new Lenis({
+          wrapper: ref.current,
+          // A lower value is smoother. Default is 0.1.
+          // This makes the scroll feel a bit more fluid.
+          lerp: 0.08,
+        });
+        lenisInstances.push(lenis);
+      }
+    });
+
+    if (lenisInstances.length === 0) return;
+
+    let animationFrameId: number;
+    function raf(time: number) {
+      lenisInstances.forEach(lenis => lenis.raf(time));
+      animationFrameId = requestAnimationFrame(raf);
+    }
+
+    animationFrameId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      lenisInstances.forEach(lenis => lenis.destroy());
+    };
+  }, []);
 
   return (
-    <main className="flex-1 grid grid-cols-1 md:grid-cols-[1fr_1fr_1.5fr]">
-      <div className="relative border-b md:border-b-0 md:border-r border-white/10 py-6">
-        <AboutColumn />
-      </div>
-      <div className="relative border-b md:border-b-0 md:border-r border-white/10 py-6">
-        <ProjectsColumn 
-          projects={projects} 
-          activeProject={activeProject} 
-          onProjectHover={setActiveProject} 
-          onProjectClick={handleProjectClick}
+    <>
+      <main className="flex-1 grid grid-cols-1 md:grid-cols-[1fr_1fr_1.5fr] min-h-0">
+        <div ref={aboutColRef} className="relative border-b md:border-b-0 md:border-r border-white/10 py-6 overflow-y-auto custom-scrollbar">
+          <AboutColumn onProfileClick={() => setIsAboutMeOpen(true)} />
+        </div>
+        <div ref={projectsColRef} className="relative border-b md:border-b-0 md:border-r border-white/10 py-6 overflow-y-auto custom-scrollbar">
+          <ProjectsColumn 
+            projects={projects} 
+            activeProject={activeProject} 
+            onProjectHover={setActiveProject} 
+            onProjectClick={setSelectedProject}
+          />
+        </div>
+        <div ref={detailColRef} className="relative py-6 overflow-y-auto custom-scrollbar">
+          <ProjectDetailColumn 
+            project={activeProject} 
+            onInfoClick={() => activeProject && setSelectedProject(activeProject)} 
+          />
+        </div>
+      </main>
+      
+      {selectedProject && (
+        <ProjectModal 
+          project={selectedProject} 
+          onClose={() => setSelectedProject(null)} 
         />
-      </div>
-      <div ref={projectDetailRef} className="relative py-6">
-        <ProjectDetailColumn project={activeProject} />
-      </div>
-    </main>
+      )}
+
+      {isAboutMeOpen && (
+        <AboutMeModal
+          onClose={() => setIsAboutMeOpen(false)}
+        />
+      )}
+    </>
   );
 };
 

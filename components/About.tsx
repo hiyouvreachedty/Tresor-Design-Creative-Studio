@@ -8,7 +8,7 @@ const About: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="overflow-hidden rounded-lg">
             <img 
-              src="https://picsum.photos/seed/aboutus/1000/1200" 
+              src="https://picsum.photos/seed/aboutus/1000/1200.webp" 
               alt="Studio Freight Team" 
               className="w-full h-auto object-cover" 
             />

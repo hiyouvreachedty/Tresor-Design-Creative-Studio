@@ -1,53 +1,87 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const MarqueeText: React.FC = () => (
+const marqueePhrases = [
+  "Design Everything", "Adopt New Realities", "Use Your Headlights", "Make It Matter",
+  "Rally Others On", "Choose the Future", "Seek Out Shadows", "Reverse Engineer with Curiosity",
+  "Garner Conviction", "Dream Without Limits"
+];
+
+const MarqueeContent: React.FC = () => (
   <div className="flex-shrink-0 flex items-center">
-    <span className="px-8 text-sm tracking-wider text-gray-400">JUT SHADOWS</span>
-    <span className="px-8 text-sm tracking-wider text-gray-400">//</span>
-    <span className="px-8 text-sm tracking-wider text-gray-400">01 DESIGN EVERYTHING</span>
-    <span className="px-8 text-sm tracking-wider text-gray-400">//</span>
-    <span className="px-8 text-sm tracking-wider text-gray-400">07 SEEK OUT SHADOWS</span>
-    <span className="px-8 text-sm tracking-wider text-gray-400">//</span>
+    {marqueePhrases.map((phrase, index) => (
+      <React.Fragment key={index}>
+        <span className="px-4 text-xs tracking-wider font-black uppercase">{phrase}</span>
+        <span className="px-4 text-xs tracking-wider font-black text-gray-500">//</span>
+      </React.Fragment>
+    ))}
   </div>
 );
 
 const Header: React.FC = () => {
+  const [mousePosition, setMousePosition] = useState({ x: -200, y: -200 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setMousePosition({ x: -200, y: -200 });
+  };
+
   return (
     <header className="relative z-10 shrink-0">
       <div className="flex items-center justify-between border-b border-white/10 pb-4">
-        <div className="flex items-center space-x-4 text-2xl font-bold">
-          <span>W</span>
-          <span>$</span>
-          <span>&#9733;</span>
+        <div className="flex items-center space-x-2 text-gray-400">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/><path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/><path d="M19 19C17.8954 17.3431 15.6569 16 12 16C8.34315 16 6.10457 17.3431 5 19" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/></svg>
         </div>
-        <div className="marquee-container relative flex-1 mx-4 h-6 overflow-hidden group">
-          <div className="absolute inset-0 flex items-center filter blur-[1px] group-hover:blur-none transition-all duration-300">
+
+        <div 
+          className="flex-1 mx-4 h-6 overflow-hidden relative"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+        >
+          {/* Dimmed Layer */}
+          <div className="absolute inset-0 flex items-center text-gray-600">
              <div className="animate-marquee whitespace-nowrap flex">
-                <MarqueeText />
-                <MarqueeText />
-                <MarqueeText />
-                <MarqueeText />
+                {Array.from({ length: 4 }).map((_, i) => <MarqueeContent key={i} />)}
              </div>
           </div>
-          <style>{`
-            @keyframes marquee {
-              0% { transform: translateX(0%); }
-              100% { transform: translateX(-50%); }
-            }
-            .animate-marquee {
-              animation: marquee 40s linear infinite;
-            }
-          `}</style>
+          {/* Highlighted Layer */}
+          <div 
+            className="absolute inset-0 flex items-center text-[--color-off-white] transition-all duration-300 ease-out"
+            style={{
+              clipPath: `circle(80px at ${mousePosition.x}px ${mousePosition.y}px)`,
+            }}
+          >
+             <div className="animate-marquee whitespace-nowrap flex">
+                {Array.from({ length: 4 }).map((_, i) => <MarqueeContent key={i} />)}
+             </div>
+          </div>
         </div>
-        <a href="#" className="border border-green-400 text-green-400 px-5 py-2 rounded-full font-medium text-sm hover:bg-green-400 hover:text-black transition-colors duration-300">
+        <a href="#" className="border border-[--color-neon-green] text-[--color-neon-green] px-4 py-2 rounded-md font-medium text-xs hover:bg-[--color-neon-green] hover:text-black transition-colors duration-300 hover:shadow-[0_0_15px_var(--color-neon-green)]">
           CONTACT
         </a>
       </div>
-      <div className="flex items-center justify-center py-6 md:py-10 lg:py-12">
-        <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-black tracking-tighter leading-none text-stone-100">
-          STUDIO FREIGHT
+      <div className="flex items-center justify-center py-6 md:py-8 lg:py-10">
+        <h1 className="text-center text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-black tracking-tighter leading-none text-[--color-off-white] uppercase" style={{fontFamily: "'Inter', sans-serif"}}>
+          TRESOR DESIGN
         </h1>
       </div>
+      <div className="w-full border-b border-white/10"></div>
+       <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-25%); }
+          }
+          .animate-marquee {
+            animation: marquee 30s linear infinite;
+          }
+        `}</style>
     </header>
   );
 };

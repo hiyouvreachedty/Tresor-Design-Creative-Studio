@@ -1,39 +1,33 @@
-
 import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20">
+    <section className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden py-20 -mx-4 md:-mx-6 lg:-mx-8">
+        <div className="absolute inset-0 z-0 opacity-30 bg-black">
             <video
                 autoPlay
                 loop
                 muted
                 playsInline
                 className="w-full h-full object-cover"
-                src="https://cdn.studiofreight.com/sfe/work/v-2/noise.mp4"
+                src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-rotating-earth-42239-large.mp4"
             ></video>
         </div>
-      <div className="relative z-10 px-4">
-        <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold uppercase tracking-tighter leading-none">
-          <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-gradient-x">
-            We Build Brands
-          </span>
-          <br />
-          <span className="bg-gradient-to-r from-blue-400 via-teal-400 to-green-500 bg-clip-text text-transparent animate-gradient-x-reverse">
-            & Websites
-          </span>
-        </h1>
-      </div>
-       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2 animate-bounce">
-        <span className="text-xs tracking-widest uppercase">Scroll</span>
-        <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 0V24M8 24L1 17M8 24L15 17" stroke="white" strokeWidth="2"/>
-        </svg>
-      </div>
+        <div className="relative z-10 px-4">
+            <h2 className="font-title text-4xl md:text-6xl lg:text-7xl leading-tight mb-8 max-w-4xl mx-auto">
+              How big would you dream if you knew you wouldn’t fail?
+            </h2>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#portfolio" className="border border-[--color-neon-green] text-[--color-neon-green] px-6 py-3 rounded-md font-medium hover:bg-[--color-neon-green] hover:text-black transition-colors duration-300 hover:shadow-[0_0_15px_var(--color-neon-green)]">
+                    Enter the Vault
+                </a>
+                <a href="#systems" className="border border-[--color-gold] text-[--color-gold] px-6 py-3 rounded-md font-medium hover:bg-[--color-gold] hover:text-black transition-colors duration-300 hover:shadow-[0_0_15px_var(--color-gold)]">
+                    Meet the Systems
+                </a>
+            </div>
+        </div>
     </section>
   );
 };
 
-// FIX: Add missing default export
 export default Hero;
