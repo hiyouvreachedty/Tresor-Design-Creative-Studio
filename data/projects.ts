@@ -66,6 +66,7 @@ export const projects: Project[] = [
     description: 'Directed the public relations and branding strategy for a high-growth tech company, successfully guiding its public perception from an unknown startup (Nano Nuclear) to a successful NASDAQ-listed corporation.',
     highlights: ['Secured features in top-tier tech and financial publications.', 'Developed a strong investor-focused brand narrative.', 'Managed crisis communications during market volatility.'],
     tickerSymbol: 'NASDAQ:NNE',
+    url: 'https://highkeyagency.com',
     mediaLinks: [
       { 
         title: 'Nano Nuclear Energy CEO weighs impact of Trump\'s executive orders', 
@@ -108,7 +109,8 @@ export const projects: Project[] = [
     image1: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=75', 
     image2: 'https://images.unsplash.com/photo-1603899122634-f086ca5f0ddd?auto=format&fit=crop&w=800&q=75',
     description: 'Designed and prototyped a SaaS application specifically for tattoo artists. InkFlow is a CRM and content management system that streamlines booking, client management, and portfolio showcasing, allowing artists to focus on their craft.',
-    highlights: ['User-centric design based on interviews with 20+ tattoo artists.', 'AI-powered caption generation for social media posts.', 'Integrated scheduling and deposit system to reduce no-shows.']
+    highlights: ['User-centric design based on interviews with 20+ tattoo artists.', 'AI-powered caption generation for social media posts.', 'Integrated scheduling and deposit system to reduce no-shows.'],
+    url: 'https://ink-flow-3ab2297c.base44.app'
   },
   { 
     id: 7, 

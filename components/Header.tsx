@@ -45,17 +45,18 @@ const Header: React.FC = () => {
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
         >
-          {/* Dimmed Layer */}
-          <div className="absolute inset-0 flex items-center text-gray-600">
+          {/* Dimmed, Blurred Layer */}
+          <div className="absolute inset-0 flex items-center text-gray-600" style={{ filter: 'blur(1.5px)' }}>
              <div className="animate-marquee whitespace-nowrap flex">
                 {Array.from({ length: 4 }).map((_, i) => <MarqueeContent key={i} />)}
              </div>
           </div>
-          {/* Highlighted Layer */}
+          {/* Highlighted, Glowing Layer */}
           <div 
             className="absolute inset-0 flex items-center text-[--color-off-white] transition-all duration-300 ease-out"
             style={{
               clipPath: `circle(80px at ${mousePosition.x}px ${mousePosition.y}px)`,
+              textShadow: '0 0 8px rgba(245, 245, 245, 0.5)',
             }}
           >
              <div className="animate-marquee whitespace-nowrap flex">
@@ -63,7 +64,7 @@ const Header: React.FC = () => {
              </div>
           </div>
         </div>
-        <a href="#" className="border border-[--color-neon-green] text-[--color-neon-green] px-4 py-2 rounded-md font-medium text-xs hover:bg-[--color-neon-green] hover:text-black transition-colors duration-300 hover:shadow-[0_0_15px_var(--color-neon-green)]">
+        <a href="#" className="contact-btn rounded-md font-bold text-xs">
           CONTACT
         </a>
       </div>
@@ -80,6 +81,33 @@ const Header: React.FC = () => {
           }
           .animate-marquee {
             animation: marquee 30s linear infinite;
+          }
+
+          .contact-btn {
+            --c: #000; /* text color */
+            background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+              var(--color-neon-green); /* background color */
+            color: #0000;
+            border: none;
+            transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+            text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+              calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+            outline-offset: .1em;
+            transition: 0.3s;
+            padding: 0.5rem 1rem;
+          }
+
+          .contact-btn:hover,
+          .contact-btn:focus-visible {
+            --_p: 0%;
+            --_i: 1;
+          }
+
+          .contact-btn:active {
+            text-shadow: none;
+            color: var(--c);
+            box-shadow: inset 0 0 9e9q #0005;
+            transition: 0s;
           }
         `}</style>
     </header>
