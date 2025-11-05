@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Project } from '../data/projects';
+import TradingViewWidget from './TradingViewWidget';
 
 interface ProjectsColumnProps {
   projects: Project[];
@@ -7,7 +8,31 @@ interface ProjectsColumnProps {
   onProjectHover: (project: Project) => void;
 }
 
+const ProjectExpansionDetail: React.FC<{ project: Project }> = ({ project }) => {
+  return (
+    <div className="pt-2 pb-4 space-y-4">
+      <div className="group aspect-video bg-gray-800/50 rounded-lg overflow-hidden">
+        <img src={project.image1} alt={`${project.name} view 1`} className="w-full h-full object-cover"/>
+      </div>
+      <div className="group aspect-video bg-gray-800/50 rounded-lg overflow-hidden">
+        {project.tickerSymbol ? (
+          <TradingViewWidget symbol={project.tickerSymbol} />
+        ) : (
+          <img src={project.image2} alt={`${project.name} view 2`} className="w-full h-full object-cover"/>
+        )}
+      </div>
+    </div>
+  );
+};
+
+
 const ProjectsColumn: React.FC<ProjectsColumnProps> = ({ projects, activeProject, onProjectHover }) => {
+  const [expandedProjectId, setExpandedProjectId] = useState<number | null>(null);
+
+  const handleToggleExpand = (projectId: number) => {
+    setExpandedProjectId(prevId => (prevId === projectId ? null : projectId));
+  };
+
   return (
     <div className="px-4 md:px-6">
       <h2 className="text-xs font-bold tracking-widest text-gray-400 mb-4">PROJECTS</h2>
@@ -18,11 +43,24 @@ const ProjectsColumn: React.FC<ProjectsColumnProps> = ({ projects, activeProject
             onMouseEnter={() => onProjectHover(project)}
             className="border-b border-white/10 last:border-b-0 group"
           >
-            <div className="flex justify-between items-center py-3">
+            <div 
+                className="flex justify-between items-center py-3 cursor-pointer md:cursor-default"
+                onClick={() => handleToggleExpand(project.id)}
+                role="button"
+                aria-expanded={expandedProjectId === project.id}
+                aria-controls={`project-details-${project.id}`}
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleToggleExpand(project.id);
+                  }
+                }}
+            >
               <div className="flex items-center flex-1 min-w-0">
                 <span
                   className={`text-2xl font-medium tracking-tight text-left transition-colors duration-200 truncate ${
-                    activeProject?.id === project.id ? 'text-[--color-off-white]' : 'text-gray-500 group-hover:text-[--color-off-white]'
+                    (activeProject?.id === project.id || expandedProjectId === project.id) ? 'text-[--color-off-white]' : 'text-gray-500 group-hover:text-[--color-off-white]'
                   }`}
                 >
                   {project.name}
@@ -42,7 +80,23 @@ const ProjectsColumn: React.FC<ProjectsColumnProps> = ({ projects, activeProject
                   </a>
                 )}
               </div>
-              <span className="text-xs text-gray-500 uppercase pl-4">{project.type}</span>
+              <div className="flex items-center">
+                <span className="hidden md:inline text-xs text-gray-500 uppercase pl-4">{project.type}</span>
+                <div 
+                    className="md:hidden ml-4 text-[--color-neon-green] border border-[--color-neon-green] rounded-sm w-6 h-6 flex items-center justify-center flex-shrink-0"
+                    aria-hidden="true"
+                >
+                    <span className={`transition-transform duration-300 text-lg ${expandedProjectId === project.id ? 'rotate-45' : ''}`}>+</span>
+                </div>
+              </div>
+            </div>
+            <div 
+                id={`project-details-${project.id}`}
+                className={`md:hidden transition-all duration-500 ease-in-out grid ${expandedProjectId === project.id ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
+            >
+              <div className="overflow-hidden">
+                <ProjectExpansionDetail project={project} />
+              </div>
             </div>
           </li>
         ))}

@@ -63,17 +63,17 @@ const MainContent: React.FC = () => {
   return (
     <>
       <main className="flex-1 grid grid-cols-1 md:grid-cols-[1fr_1fr_1.5fr] min-h-0">
-        <div ref={aboutColRef} className="relative border-b md:border-b-0 md:border-r border-white/10 py-6 overflow-y-auto custom-scrollbar">
+        <div ref={aboutColRef} className="hidden md:flex flex-col relative md:border-r border-white/10 py-6 overflow-y-auto custom-scrollbar">
           <AboutColumn onProfileClick={() => setIsAboutMeOpen(true)} />
         </div>
-        <div ref={projectsColRef} className="relative border-b md:border-b-0 md:border-r border-white/10 py-6 overflow-y-auto custom-scrollbar">
+        <div ref={projectsColRef} className="relative md:border-r border-white/10 py-6 overflow-y-auto custom-scrollbar">
           <ProjectsColumn 
             projects={projects} 
             activeProject={activeProject} 
             onProjectHover={setActiveProject}
           />
         </div>
-        <div ref={detailColRef} className="relative py-6 overflow-y-auto custom-scrollbar">
+        <div ref={detailColRef} className="hidden md:block relative py-6 overflow-y-auto custom-scrollbar">
           <ProjectDetailColumn 
             project={activeProject} 
             onInfoClick={() => activeProject && setSelectedProject(activeProject)} 
