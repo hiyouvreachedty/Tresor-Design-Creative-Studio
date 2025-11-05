@@ -10,10 +10,10 @@ const AboutColumn: React.FC<AboutColumnProps> = ({ onProfileClick }) => {
       <div>
         <div className="mb-12">
           <h2 className="text-xs font-bold tracking-widest text-gray-400 mb-4">ABOUT</h2>
-          <p className="text-base leading-relaxed text-gray-300">
+          <p className="text-base leading-relaxed text-gray-300 break-words">
             Tresor Design is an independent creative studio building brands, digital experiences, and technology to move missions forward.
           </p>
-          <p className="mt-4 text-base leading-relaxed text-gray-300">
+          <p className="mt-4 text-base leading-relaxed text-gray-300 break-words">
             Our clients see us as trusted partners who care as much as they do, which is just a ruse because we actually care even more. While our clients work in many industries, they're all serious about earning a meaningful place in the lives of their audiences and users.
           </p>
         </div>

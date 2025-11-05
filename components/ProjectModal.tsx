@@ -28,7 +28,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
       <div className="p-6 md:p-8 overflow-y-auto custom-scrollbar">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <p className="text-gray-300 leading-relaxed mb-6">{project.description}</p>
+            <p className="text-gray-300 leading-relaxed mb-6 break-words">{project.description}</p>
             
             {project.url && (
               <div className="mb-8">
@@ -71,7 +71,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                       </button>
                       {openAccordion === index && (
                         <div id={`accordion-content-${index}`} className="pb-4 pr-6 text-sm text-gray-400 animate-fade-in-fast">
-                          <p className="mb-3">{link.description}</p>
+                          <p className="mb-3 break-words">{link.description}</p>
                           <a 
                             href={link.url} 
                             target="_blank" 

@@ -18,14 +18,14 @@ const ProjectDetailColumn: React.FC<ProjectDetailColumnProps> = ({ project, onIn
       {project ? (
         <div className="flex-1 flex flex-col min-h-0">
           <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="aspect-square bg-gray-800/50 rounded-lg overflow-hidden transition-opacity duration-500">
-              <img key={project.id + '-1'} src={project.image1} alt={`${project.name} view 1`} className="w-full h-full object-cover animate-fade-in"/>
+            <div className="group aspect-square bg-gray-800/50 rounded-lg overflow-hidden transition-opacity duration-500">
+              <img key={project.id + '-1'} src={project.image1} alt={`${project.name} view 1`} className="w-full h-full object-cover animate-fade-in transition-transform duration-300 ease-in-out group-hover:scale-105"/>
             </div>
-            <div className="aspect-square bg-gray-800/50 rounded-lg overflow-hidden transition-opacity duration-500">
+            <div className="group aspect-square bg-gray-800/50 rounded-lg overflow-hidden transition-opacity duration-500">
               {project.tickerSymbol ? (
                 <TradingViewWidget symbol={project.tickerSymbol} />
               ) : (
-                <img key={project.id + '-2'} src={project.image2} alt={`${project.name} view 2`} className="w-full h-full object-cover animate-fade-in"/>
+                <img key={project.id + '-2'} src={project.image2} alt={`${project.name} view 2`} className="w-full h-full object-cover animate-fade-in transition-transform duration-300 ease-in-out group-hover:scale-105"/>
               )}
             </div>
           </div>

@@ -17,7 +17,11 @@ const MarqueeContent: React.FC = () => (
   </div>
 );
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onContactClick: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   const [mousePosition, setMousePosition] = useState({ x: -200, y: -200 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -34,10 +38,19 @@ const Header: React.FC = () => {
 
   return (
     <header className="relative z-10 shrink-0">
-      <div className="flex items-center justify-between border-b border-white/10 pb-4">
-        <div className="flex items-center space-x-2 text-gray-400">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/><path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/><path d="M19 19C17.8954 17.3431 15.6569 16 12 16C8.34315 16 6.10457 17.3431 5 19" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/></svg>
+      <div className="flex items-center justify-between border-b border-white/10 p-4">
+        <div className="flex items-center gap-4">
+            <div className="spinner1">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div className="spinner2"></div>
+            <div className="spinner3"></div>
         </div>
 
         <div 
@@ -64,16 +77,16 @@ const Header: React.FC = () => {
              </div>
           </div>
         </div>
-        <a href="#" className="contact-btn rounded-md font-bold text-xs">
+        <button onClick={onContactClick} className="contact-btn rounded-md font-bold text-xs">
           CONTACT
-        </a>
+        </button>
       </div>
-      <div className="flex items-center justify-center py-4 md:py-5 lg:py-6">
+      <div className="flex items-center justify-center py-4">
         <h1 className="text-center text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-black tracking-tighter leading-none text-[--color-off-white] uppercase" style={{fontFamily: "'Inter', sans-serif"}}>
           TRESOR DESIGN
         </h1>
       </div>
-      <div className="w-full border-b border-white/10"></div>
+      <div className="w-full border-b border-white/20"></div>
        <style>{`
           @keyframes marquee {
             0% { transform: translateX(0%); }
@@ -108,6 +121,122 @@ const Header: React.FC = () => {
             color: var(--c);
             box-shadow: inset 0 0 9e9q #0005;
             transition: 0s;
+          }
+          
+          /* Spinner 1 animation */
+          .spinner1 {
+            position: relative;
+            width: 28px;
+            height: 28px;
+            animation: spinner1-anim 1.25s infinite linear;
+          }
+
+          .spinner1 div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-left: 1.8px solid transparent;
+            border-right: 1.8px solid transparent;
+            border-bottom: 5.4px solid var(--color-neon-green);
+            transform-origin: center 5.4px;
+          }
+
+          .spinner1 div:before,
+          .spinner1 div:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            display: block;
+            border-left: 5.4px solid transparent;
+            border-right: 5.4px solid transparent;
+            border-bottom: 3.6px solid var(--color-neon-green);
+          }
+
+          .spinner1 div:before {
+            transform: translate(-5.4px, 3.6px) rotate(35deg);
+          }
+
+          .spinner1 div:after {
+            transform: translate(-5.4px, 3.6px) rotate(-35deg);
+          }
+
+          .spinner1 div:nth-child(1) { transform: translate(-50%, -5.4px) rotate(51.42857deg) translate(0, 320%); }
+          .spinner1 div:nth-child(2) { transform: translate(-50%, -5.4px) rotate(102.85714deg) translate(0, 320%); }
+          .spinner1 div:nth-child(3) { transform: translate(-50%, -5.4px) rotate(154.28571deg) translate(0, 320%); }
+          .spinner1 div:nth-child(4) { transform: translate(-50%, -5.4px) rotate(205.71429deg) translate(0, 320%); }
+          .spinner1 div:nth-child(5) { transform: translate(-50%, -5.4px) rotate(257.14286deg) translate(0, 320%); }
+          .spinner1 div:nth-child(6) { transform: translate(-50%, -5.4px) rotate(308.57143deg) translate(0, 320%); }
+          .spinner1 div:nth-child(7) { transform: translate(-50%, -5.4px) rotate(360deg) translate(0, 320%); }
+
+          @keyframes spinner1-anim {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
+          /* Spinner 2 animation */
+          .spinner2 {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            color: var(--color-neon-green);
+            background: linear-gradient(currentColor 0 0) center/100% 2px,
+                        linear-gradient(currentColor 0 0) center/2px 100%,
+                        radial-gradient(farthest-side,#0000 calc(100% - 4px),currentColor calc(100% - 3px)),
+                        radial-gradient(circle 4px,currentColor 94%,#0000 0);
+            background-repeat: no-repeat;
+            animation: spinner2-anim 1s infinite linear;
+            position: relative;
+          }
+
+          .spinner2::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: inherit;
+            transform: rotate(45deg);
+          }
+
+          @keyframes spinner2-anim {
+            to {
+              transform: rotate(.5turn);
+            }
+          }
+
+          /* Spinner 3 animation */
+          .spinner3 {
+            position: relative;
+            width: 28px;
+            height: 28px;
+            transform: rotate(45deg);
+            overflow: hidden;
+          }
+          .spinner3:after{
+            content: '';
+            position: absolute;
+            inset: 4px;
+            margin: auto;
+            background: var(--color-background);
+          }
+          .spinner3:before{
+            content: '';
+            position: absolute;
+            inset: -8px;
+            margin: auto;
+            background: var(--color-neon-green);
+            animation: spinner3-anim 2s linear infinite;
+          }
+          @keyframes spinner3-anim {
+            0%,10% {
+              transform: translate(-32px, -32px) rotate(-45deg)
+            }
+            90%,100% {
+              transform: translate(32px, 32px) rotate(-45deg)
+            }
           }
         `}</style>
     </header>
