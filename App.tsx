@@ -14,18 +14,14 @@ const App: React.FC = () => {
   return (
     <div className="h-screen font-sans flex flex-col text-[var(--color-off-white)]">
       {/* Main bordered box */}
-      <div className="flex-1 flex flex-col pt-4 px-4 pb-2 md:pt-6 md:px-6 md:pb-3 lg:pt-8 lg:px-8 lg:pb-4 relative min-h-0">
+      <div className="flex-1 flex flex-col pt-4 px-4 pb-4 md:pt-6 md:px-6 md:pb-6 lg:pt-8 lg:px-8 lg:pb-8 relative min-h-0">
         <div className="absolute inset-2 md:inset-4 lg:inset-6 border border-white/10 rounded-xl pointer-events-none"></div>
         <Header onContactClick={() => setContactModalOpen(true)} />
         <MainContent />
-        <Footer />
-      </div>
-
-      {/* Links outside the box */}
-      <div className="text-center py-2 shrink-0">
-        <button onClick={() => setPrivacyModalOpen(true)} className="text-xs font-mono text-[var(--color-gold)]/70 hover:text-[var(--color-gold)] transition-colors mx-2">Privacy Policy</button>
-        <span className="text-[var(--color-gold)]/50">&bull;</span>
-        <button onClick={() => setTermsModalOpen(true)} className="text-xs font-mono text-[var(--color-gold)]/70 hover:text-[var(--color-gold)] transition-colors mx-2">Terms of Use</button>
+        <Footer 
+          onPrivacyClick={() => setPrivacyModalOpen(true)}
+          onTermsClick={() => setTermsModalOpen(true)}
+        />
       </div>
 
       {isPrivacyModalOpen && (
