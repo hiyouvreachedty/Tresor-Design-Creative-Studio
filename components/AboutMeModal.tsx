@@ -13,7 +13,7 @@ const DataField: React.FC<{ title: string; children: React.ReactNode }> = ({ tit
 );
 
 const AboutMeModal: React.FC<AboutMeModalProps> = ({ onClose }) => {
-  const profileImageUrl = 'https://www.gannett-cdn.com/presto/2022/02/02/USAT/f052575f-e555-4428-98e3-057bf9e80ce5-XXX_AP220330030132.jpg?width=600&quality=75';
+  const profileImageUrl = 'https://avatars.githubusercontent.com/u/107938313?v=4';
 
   return (
     <Modal onClose={onClose} maxWidth="max-w-4xl">

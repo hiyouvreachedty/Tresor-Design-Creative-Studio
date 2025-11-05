@@ -68,7 +68,7 @@ const Header: React.FC = () => {
           CONTACT
         </a>
       </div>
-      <div className="flex items-center justify-center py-6 md:py-8 lg:py-10">
+      <div className="flex items-center justify-center py-4 md:py-5 lg:py-6">
         <h1 className="text-center text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-black tracking-tighter leading-none text-[--color-off-white] uppercase" style={{fontFamily: "'Inter', sans-serif"}}>
           TRESOR DESIGN
         </h1>

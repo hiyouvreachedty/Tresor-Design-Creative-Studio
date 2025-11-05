@@ -23,8 +23,10 @@ const AboutColumn: React.FC<AboutColumnProps> = ({ onProfileClick }) => {
             <li>&rarr; Brand Strategy</li>
             <li>&rarr; Verbal Identity</li>
             <li>&rarr; Visual Identity</li>
+            <li>&rarr; Web Design</li>
+            <li>&rarr; Development</li>
+            <li>&rarr; Creative Sprint</li>
           </ul>
-          <div className="mt-4 text-gray-500">+</div>
         </div>
       </div>
       <div className="mt-auto pt-8">

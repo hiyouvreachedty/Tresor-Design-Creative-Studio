@@ -29,6 +29,21 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <p className="text-gray-300 leading-relaxed mb-6">{project.description}</p>
+            
+            {project.url && (
+              <div className="mb-8">
+                <a 
+                  href={project.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center text-[--color-gold] hover:underline font-bold group text-sm tracking-wider"
+                >
+                  <span>VISIT LIVE SITE</span>
+                  <span className="ml-2 transform transition-transform group-hover:translate-x-1">&rarr;</span>
+                </a>
+              </div>
+            )}
+
             <h3 className="font-bold text-lg text-white mb-3">Key Highlights</h3>
             <ul className="space-y-2">
               {project.highlights.map((highlight, index) => (
