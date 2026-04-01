@@ -23,7 +23,7 @@ export const projects: Project[] = [
     id: 1, 
     name: 'New Tierra Immigration', 
     type: 'Web Design', 
-    year: '2021–24', 
+    year: '2021 | 24', 
     focus: 'Branding, development, Google integration', 
     image1: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=75', 
     image2: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=75',
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     id: 2, 
     name: 'CISM Latin America', 
     type: 'UI/UX', 
-    year: '2023–24', 
+    year: '2023 | 24', 
     focus: 'Cultural design research', 
     image1: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=75', 
     image2: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=75',
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     id: 3, 
     name: 'RTB Brands (Surfaces)', 
     type: 'Web Dev', 
-    year: '2024–25', 
+    year: '2024 | 25', 
     focus: 'Massive-scale build (2,000+ pages)', 
     image1: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=75', 
     image2: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=75',
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     id: 4, 
     name: 'HighKey Agency', 
     type: 'PR / Branding', 
-    year: '2019–23', 
+    year: '2019 | 23', 
     focus: 'Nano Nuclear → NASDAQ listing', 
     image1: 'https://images.unsplash.com/photo-1665686306574-1ace09918530?auto=format&fit=crop&w=800&q=75', 
     image2: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=75',
@@ -84,7 +84,7 @@ export const projects: Project[] = [
         title: 'Nano Nuclear Energy founder talks expected Trump exec. orders', 
         url: 'https://finance.yahoo.com/video/nano-nuclear-energy-founder-talks-144500785.html', 
         type: 'video',
-        description: 'This article describes how Trump’s executive orders are expected to fast-track advanced nuclear technology and specifically mentions Nano Nuclear’s opportunity to scale up reactor deployments in the U.S.'
+        description: 'This article describes how the executive orders of Trump are expected to fast-track advanced nuclear technology and specifically mentions Nano Nuclear’s opportunity to scale up reactor deployments in the U.S.'
       }
     ]
   },
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     id: 5, 
     name: 'Particle Collection', 
     type: 'Video / Design', 
-    year: '2021–22', 
+    year: '2021  22', 
     focus: 'Crypto x Art', 
     image1: 'https://images.unsplash.com/photo-1639754502599-565b934032a3?auto=format&fit=crop&w=800&q=75', 
     image2: 'https://images.unsplash.com/photo-1642104792689-49b1a755d81b?auto=format&fit=crop&w=800&q=75',

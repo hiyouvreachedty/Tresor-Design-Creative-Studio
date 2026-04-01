@@ -59,8 +59,8 @@ const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onTermsClick }) => {
               <FooterLink>INSTAGRAM</FooterLink>
             </div>
             <div className="flex flex-col items-start gap-1 text-sm text-gray-500">
-              <span>P: +1 380.238.9383</span>
-              <a href="mailto:DEAR@TRESORDESIGN.COM" className="hover:text-white transition-colors">E: DEAR@TRESORDESIGN.COM</a>
+              <span>P: +1 250.575.0515</span>
+              <a href="mailto:TERRELLPELLETIER@PROTON.ME" className="hover:text-white transition-colors">E: DEAR@TRESORDESIGN.COM</a>
             </div>
           </div>
 

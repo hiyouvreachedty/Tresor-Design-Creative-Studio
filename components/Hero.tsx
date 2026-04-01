@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         </div>
         <div className="relative z-10 px-4">
             <h2 className="font-title text-4xl md:text-6xl lg:text-7xl leading-tight mb-8 max-w-4xl mx-auto">
-              How big would you dream if you knew you wouldn’t fail?
+              How big would you dream if you knew you would not fail?
             </h2>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#portfolio" className="border border-[--color-neon-green] text-[--color-neon-green] px-6 py-3 rounded-md font-medium hover:bg-[--color-neon-green] hover:text-black transition-colors duration-300 hover:shadow-[0_0_15px_var(--color-neon-green)]">
