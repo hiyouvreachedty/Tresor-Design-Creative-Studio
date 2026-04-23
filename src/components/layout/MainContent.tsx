@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import AboutColumn from './AboutColumn';
-import ProjectsColumn from './ProjectsColumn';
-import ProjectDetailColumn from './ProjectDetailColumn';
+import AboutColumn from '../sections/AboutColumn';
+import ProjectsColumn from '../sections/ProjectsColumn';
+import ProjectDetailColumn from '../sections/ProjectDetailColumn';
 import { projects, Project } from '../../content/projects';
-import ProjectModal from './ProjectModal';
-import AboutMeModal from './AboutMeModal';
-import ImageModal from './ImageModal';
+import ProjectModal from '../ui/ProjectModal';
+import AboutMeModal from '../ui/AboutMeModal';
+import ImageModal from '../ui/ImageModal';
 
 declare global {
   interface Window {
