@@ -1,7 +1,7 @@
 import React from 'react';
 import { Project } from '../../content/projects';
 import Modal from './Modal';
-import TradingViewWidget from './TradingViewWidget';
+import TradingViewWidget from '../shared/TradingViewWidget';
 
 interface ImageModalProps {
   project: Project;
