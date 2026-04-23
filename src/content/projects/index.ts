@@ -42,8 +42,8 @@ export const projects: Project[] = [
     type: 'Web Design',
     year: '2021 | 24',
     focus: 'Branding, Web Development, Google Integration',
-    image1: '/images/new-tierra-immigration/hero-homepage.png',
-    image2: '/images/new-tierra-immigration/who-we-are.png',
+            image1: '/images/new-tierra-immigration/NT-HERO.jpg',
+            image2: '/images/new-tierra-immigration/NT-CTA.jpeg',
     description: 'Developed a comprehensive brand identity and digital presence for a Vancouver-based RCIC-regulated immigration consultancy. The goal was to establish a trustworthy, professional platform that simplifies the Canadian immigration process and converts visitors into booked consultations.',
     highlights: [
       'Full brand identity system from logo to typography, aligned with RCIC standards.',
