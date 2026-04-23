@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Project } from '../data/projects';
+import { Project } from '../../content/projects';
 import TradingViewWidget from './TradingViewWidget';
 import Modal from './Modal';
 
