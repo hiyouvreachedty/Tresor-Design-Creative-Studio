@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Project } from '../../content/projects';
-import TradingViewWidget from './TradingViewWidget';
+import TradingViewWidget from '../shared/TradingViewWidget';
 import Modal from './Modal';
 
 interface ProjectModalProps {
