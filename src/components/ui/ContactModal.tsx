@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { testimonials } from '../data/testimonials';
+import { testimonials } from '../../content/testimonials';
 
 interface ContactModalProps {
   onClose: () => void;
