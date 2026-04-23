@@ -56,7 +56,7 @@ export const projects: Project[] = [
   {
     id: 3,
     name: 'CISM Latin America',
-    type: 'UI/UX',
+    type: 'UI / UX',
     year: '2023 | 24',
     focus: 'SEO Strategy, Content Marketing & Digital Growth',
     image1: '/images/cism-latin-america/cism-mockup.jpeg',
@@ -68,7 +68,7 @@ export const projects: Project[] = [
       'Built out marketing campaign assets and social content to drive brand awareness.',
       'Collaborated cross-functionally to align content output with editorial and business goals.',
     ],
-    url: 'https://cismlatinamerica.ca/'
+    url: 'https://mycism.com'
   },
   {
     id: 4,
