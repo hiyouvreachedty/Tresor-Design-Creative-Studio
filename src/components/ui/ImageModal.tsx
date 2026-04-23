@@ -1,5 +1,5 @@
 import React from 'react';
-import { Project } from '../data/projects';
+import { Project } from '../../content/projects';
 import Modal from './Modal';
 import TradingViewWidget from './TradingViewWidget';
 
