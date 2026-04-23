@@ -25,8 +25,8 @@ export const projects: Project[] = [
     type: 'Web Design', 
     year: '2021 | 24', 
     focus: 'Branding, development, Google integration', 
-    image1: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=75', 
-    image2: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=75',
+            image1: '/images/new-tierra-immigration/hero-homepage.png',
+        image2: '/images/new-tierra-immigration/who-we-are.png',
     description: 'Developed a comprehensive brand identity and digital presence for a modern immigration consultancy. The goal was to create a trustworthy, accessible, and professional platform to guide clients through complex immigration processes.',
     highlights: ['Full brand identity system from logo to typography.', 'Custom website build with a client-friendly CMS.', 'SEO strategy and Google Suite integration for lead generation.'],
     url: 'https://newtierraimmigration.ca'
