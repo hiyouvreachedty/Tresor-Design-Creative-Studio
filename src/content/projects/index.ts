@@ -4,8 +4,7 @@ export interface Project {
   type: string;
   year: string;
   focus: string;
-  image1: string;
-  image2: string;
+  images: string[];
   description: string;
   highlights: string[];
   tickerSymbol?: string;
@@ -21,37 +20,39 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    name: 'Punktured Art Tattoo Studio',
-    type: 'Web Design',
-    year: '2025 | 26',
-    focus: 'Branding, Web Design & Development, Booking Integration',
-    image1: '/images/punktured-art/hero-homepage.png',
-    image2: '/images/punktured-art/services-gallery.png',
-    description: 'Designed and developed a full digital presence for Punktured Art Tattoo Studio, a West Kelowna-based tattoo studio known for realism, fine line, and custom ink.',
-    highlights: [
-      'Custom brand identity and visual language built around the studio\'s tattoo style.',
-      'Fully responsive website with online booking integration.',
-      'Gallery-forward layout to showcase artist portfolios and drive client inquiries.',
-      'Google Business and local SEO setup to improve discoverability in the Kelowna area.',
+    name: 'Punktured Art',
+    type: 'Branding / Web Design',
+    year: '2025',
+    focus: 'Tattoo Studio Identity & Booking Experience',
+    images: [
+      '/images/punktured-art/punktured-home.png',
+      '/images/punktured-art/punktured-about.png',
     ],
-    url: 'https://www.punkturedart.com'
+    description:
+      'A custom portfolio and booking-forward digital experience for a tattoo and art brand, designed to feel immersive, editorial, and conversion-aware.',
+    highlights: [
+      'Built a distinct digital identity for a tattoo and art studio brand.',
+      'Focused on visual storytelling, navigation clarity, and appointment intent.',
+      'Designed to showcase artwork while supporting client trust and inquiry flow.',
+    ],
   },
   {
     id: 2,
     name: 'New Tierra Immigration',
-    type: 'Web Design',
-    year: '2021 | 24',
-    focus: 'Branding, Web Development, Google Integration',
-    image1: '/images/new-tierra-immigration/NT-HERO.jpg',
-    image2: '/images/new-tierra-immigration/NT-CTA.jpeg',
-    description: 'Developed a comprehensive brand identity and web presence for New Tierra Immigration, a Canadian immigration consultancy serving Spanish-speaking clients.',
-    highlights: [
-      'Full brand identity system including logo, colour palette, and typography.',
-      'Custom website built for trust, clarity, and conversion.',
-      'SEO strategy targeting bilingual and immigration-specific search terms.',
-      'Bilingual-ready content structure to serve both English and Spanish audiences.',
+    type: 'Web Design / Brand Presence',
+    year: '2024',
+    focus: 'Professional Services Website',
+    images: [
+      '/images/new-tierra-immigration/new-tierra-home.jpeg',
+      '/images/new-tierra-immigration/new-tierra-services.jpeg',
     ],
-    url: 'https://newtierraimmigration.ca'
+    description:
+      'A professional web presence for an immigration-focused business, built to communicate trust, clarity, and an approachable service experience.',
+    highlights: [
+      'Created a clean, informative layout for a service-based business.',
+      'Balanced professionalism with accessibility for prospective clients.',
+      'Structured pages to support credibility and conversion.',
+    ],
   },
   {
     id: 3,
@@ -59,32 +60,39 @@ export const projects: Project[] = [
     type: 'UI / UX',
     year: '2023 | 24',
     focus: 'SEO Strategy, Content Marketing & Digital Growth',
-    image1: '/images/cism-latin-america/cism-mockup.jpeg',
-    image2: '/images/cism-latin-america/cism-hero.jpeg',
-    description: 'Led a digital growth initiative for CISM Latin America, Canada\'s International Student Magazine, focused on expanding reach across Latin American student audiences through SEO, content strategy, and targeted marketing campaigns.',
+    images: [
+      '/images/cism-latin-america/cism-mockup.jpeg',
+      '/images/cism-latin-america/cism-hero.jpeg',
+      '/images/cism-latin-america/cism-home.jpeg',
+      '/images/cism-latin-america/cism-footer.png',
+      '/images/cism-latin-america/cism-logo.jpeg',
+    ],
+    description:
+      "Led a digital growth initiative for CISM Latin America, Canada's International Student Magazine, focused on expanding reach across Latin American student audiences through SEO, content strategy, and targeted marketing campaigns.",
     highlights: [
       'Produced 10+ optimised content pages resulting in measurable improvements in organic traffic and lead engagement.',
       'Developed and executed an SEO strategy targeting Latin American student demographics across Canada.',
       'Built out marketing campaign assets and social content to drive brand awareness.',
       'Collaborated cross-functionally to align content output with editorial and business goals.',
     ],
-    url: 'https://mycism.com'
+    url: 'https://mycism.com',
   },
   {
     id: 4,
     name: 'HighKey Agency',
-    type: 'PR / Branding',
-    year: '2019 | 23',
-    focus: 'Brand Strategy, PR & NASDAQ Campaign',
-    image1: 'https://images.unsplash.com/photo-1665686306574-1ace09918530?auto=format&fit=crop&w=800&q=80',
-    image2: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80',
-    description: 'Directed the public relations and brand strategy for HighKey Agency, a social media and PR firm with a roster of ~10 clients across tech, entertainment, and lifestyle sectors.',
-    highlights: [
-      'Secured features in top-tier tech and business media outlets.',
-      'Developed a strong investor-focused narrative for a NASDAQ-listed client.',
-      'Managed crisis communications and proactive media outreach.',
-      'Oversaw content production achieving a reported 64% increase in site traffic.',
+    type: 'Marketing / Brand Strategy',
+    year: '2022',
+    focus: 'Content, PR & Campaign Support',
+    images: [
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80',
     ],
-    url: 'https://highkeyagency.com'
-  }
+    description:
+      'Worked across social content, press releases, and brand strategy for multiple client accounts in a fast-moving agency environment.',
+    highlights: [
+      'Supported approximately 10 client accounts across campaigns and content.',
+      'Contributed to brand strategy and digital content execution.',
+      'Helped drive measurable traffic growth across client work.',
+    ],
+  },
 ];
