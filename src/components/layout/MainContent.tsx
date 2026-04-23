@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import AboutColumn from './AboutColumn';
 import ProjectsColumn from './ProjectsColumn';
 import ProjectDetailColumn from './ProjectDetailColumn';
-import { projects, Project } from '../data/projects';
+import { projects, Project } from '../../content/projects';
 import ProjectModal from './ProjectModal';
 import AboutMeModal from './AboutMeModal';
 import ImageModal from './ImageModal';
