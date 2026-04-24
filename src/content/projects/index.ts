@@ -25,11 +25,11 @@ export const projects: Project[] = [
     year: '2025',
     focus: 'Tattoo Studio Identity & Booking Experience',
     images: [
-      'public/images/punktured-art/PATS-Logo.jpg',
-      'public/images/punktured-art/PA-HERO.jpg',
-      'public/images/punktured-art/PA-AS.jpg',
-      'public/images/punktured-art/PA-AU.jpg',
-      'public/images/punktured-art/PA-PS.jpg',
+      '/images/punktured-art/PATS-Logo.jpg',
+      '/images/punktured-art/PA-HERO.jpg',
+      '/images/punktured-art/PA-AS.jpg',
+      '/images/punktured-art/PA-AU.jpg',
+      '/images/punktured-art/PA-PS.jpg',
     ],
     description:
       'A custom portfolio and booking-forward digital experience for a tattoo and art brand, designed to feel immersive, editorial, and conversion-aware.',
@@ -46,11 +46,11 @@ export const projects: Project[] = [
     year: '2024',
     focus: 'Professional Services Website',
     images: [
-      'public/images/new-tierra-immigration/logo.jpeg',
-      'public/images/new-tierra-immigration/NT-HERO.jpg',
-      'public/images/new-tierra-immigration/NT-CTA.jpeg',
-      'public/images/new-tierra-immigration/NT-INFO.png',
-      'public/images/new-tierra-immigration/NT-REVIEWS.jpeg',
+      '/images/new-tierra-immigration/logo.jpeg',
+      '/images/new-tierra-immigration/NT-HERO.jpg',
+      '/images/new-tierra-immigration/NT-CTA.jpeg',
+      '/images/new-tierra-immigration/NT-INFO.png',
+      '/images/new-tierra-immigration/NT-REVIEWS.jpeg',
     ],
     description:
       'A professional web presence for an immigration-focused business, built to communicate trust, clarity, and an approachable service experience.',
