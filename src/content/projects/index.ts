@@ -38,6 +38,7 @@ export const projects: Project[] = [
       'Focused on visual storytelling, navigation clarity, and appointment intent.',
       'Designed to showcase artwork while supporting client trust and inquiry flow.',
     ],
+    url: 'https://punkturedart.com',
   },
   {
     id: 2,
@@ -59,6 +60,7 @@ export const projects: Project[] = [
       'Balanced professionalism with accessibility for prospective clients.',
       'Structured pages to support credibility and conversion.',
     ],
+    url 'https://www.newtierraimmigration.ca/',
   },
   {
     id: 3,
@@ -98,5 +100,6 @@ export const projects: Project[] = [
       'Contributed to brand strategy and digital content execution.',
       'Helped drive measurable traffic growth across client work.',
     ],
+    url: 'https://highkeyagency.com',
   },
 ];
