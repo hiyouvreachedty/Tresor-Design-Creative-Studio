@@ -60,7 +60,7 @@ export const projects: Project[] = [
       'Balanced professionalism with accessibility for prospective clients.',
       'Structured pages to support credibility and conversion.',
     ],
-    url 'https://www.newtierraimmigration.ca/',
+    url: 'https://newtierraimmigration.ca/',
   },
   {
     id: 3,
