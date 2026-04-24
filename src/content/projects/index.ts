@@ -92,8 +92,8 @@ export const projects: Project[] = [
     images: [
       '/images/highkey-agency/IMG_3285.PNG',
       '/images/highkey-agency/IMG_3286.PNG,,
-      'public/images/highkey-agency/IMG_3284.jpg',
-      'public/images/highkey-agency/IMG_3280.jpg',
+      '/images/highkey-agency/IMG_3284.jpg',
+      '/images/highkey-agency/IMG_3280.jpg',
       '
     ],
     description:
