@@ -6,23 +6,23 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    quote: "Working with Tresor was a game-changer. They didn't just deliver a website; they delivered a vision. Their attention to detail and creative prowess are second to none.",
-    author: 'Jane Doe',
+    quote: "Working with Terrell was a game-changer. He didn't just deliver a website; they delivered a vision. his attention to detail and creative prowess are second to none!",
+    author: 'Madeleine Mcleod',
     title: 'CEO, New Tierra Immigration'
   },
   {
     quote: "The team's ability to dive deep into our complex needs and emerge with a simple, elegant solution was remarkable. They are true partners in every sense of the word.",
-    author: 'John Smith',
+    author: 'Richter Boyd',
     title: 'Director, CISM Latin America'
   },
   {
     quote: "Their process is as beautiful as their design work. Seamless, collaborative, and incredibly efficient. We couldn't be happier with the result.",
-    author: 'Emily White',
-    title: 'Founder, InkFlow App'
+    author: 'Dan Schlauwitz',
+    title: 'Owner, PunkturedArt'
   },
   {
-    quote: "Tresor Design took our brand to the next level. Their strategic insights and branding expertise were instrumental in our successful NASDAQ listing.",
-    author: 'Michael Chen',
+    quote: "Terrell with HighKey took our brand to the next level. Their strategic insights and branding expertise were instrumental in our successful NASDAQ listing.",
+    author: 'Jay Jiang Yu',
     title: 'CMO, Nano Nuclear Energy'
   },
   {
