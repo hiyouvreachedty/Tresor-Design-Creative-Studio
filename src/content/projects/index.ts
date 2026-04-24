@@ -64,11 +64,11 @@ export const projects: Project[] = [
     year: '2023 | 24',
     focus: 'SEO Strategy, Content Marketing & Digital Growth',
     images: [
-      '/images/cism-latin-america/cism-mockup.jpeg',
-      '/images/cism-latin-america/cism-hero.jpeg',
-      '/images/cism-latin-america/cism-home.jpeg',
-      '/images/cism-latin-america/cism-footer.png',
       '/images/cism-latin-america/cism-logo.jpeg',
+      '/images/cism-latin-america/cism-home.jpeg',
+      '/images/cism-latin-america/cism-hero.jpeg',
+      '/images/cism-latin-america/cism-footer.png',
+      '/images/cism-latin-america/cism-mockup.jpeg',
     ],
     description:
       "Led a digital growth initiative for CISM Latin America, Canada's International Student Magazine, focused on expanding reach across Latin American student audiences through SEO, content strategy, and targeted marketing campaigns.",
