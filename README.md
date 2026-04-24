@@ -28,6 +28,8 @@ Tresor-Design-Creative-Studio/
 │       └── projects/             # Project showcase images
 │           ├── tierra-immigration/
 │           └── punktured-art/
+│           └── cism-latinamerica/
+│           └── Highkeyagency/
 ├── src/
 │   ├── app/                      # App entry & root component
 │   │   ├── App.tsx
