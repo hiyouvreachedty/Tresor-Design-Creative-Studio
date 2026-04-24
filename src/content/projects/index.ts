@@ -69,7 +69,7 @@ export const projects: Project[] = [
     year: '2023 | 24',
     focus: 'SEO Strategy, Content Marketing & Digital Growth',
     images: [
-      '/images/cism-latin-america/cism-logo.jpeg',
+      '/images/cism-latin-america/CISM-LOGO.jpeg',
       '/images/cism-latin-america/cism-hero.jpeg',
       '/images/cism-latin-america/cism-mockup.jpeg',
     ],
