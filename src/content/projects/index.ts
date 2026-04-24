@@ -46,8 +46,11 @@ export const projects: Project[] = [
     year: '2024',
     focus: 'Professional Services Website',
     images: [
-      '/images/new-tierra-immigration/new-tierra-home.jpeg',
-      '/images/new-tierra-immigration/new-tierra-services.jpeg',
+      'public/images/new-tierra-immigration/logo.jpeg',
+      'public/images/new-tierra-immigration/NT-HERO.jpg',
+      'public/images/new-tierra-immigration/NT-CTA.jpeg',
+      'public/images/new-tierra-immigration/NT-INFO.png',
+      'public/images/new-tierra-immigration/NT-REVIEWS.jpeg',
     ],
     description:
       'A professional web presence for an immigration-focused business, built to communicate trust, clarity, and an approachable service experience.',
