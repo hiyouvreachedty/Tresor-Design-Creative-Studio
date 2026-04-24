@@ -25,8 +25,11 @@ export const projects: Project[] = [
     year: '2025',
     focus: 'Tattoo Studio Identity & Booking Experience',
     images: [
-      '/images/punktured-art/punktured-home.png',
-      '/images/punktured-art/punktured-about.png',
+      'public/images/punktured-art/PATS-Logo.jpg',
+      'public/images/punktured-art/PA-HERO.jpg',
+      'public/images/punktured-art/PA-AS.jpg',
+      'public/images/punktured-art/PA-AU.jpg',
+      'public/images/punktured-art/PA-PS.jpg',
     ],
     description:
       'A custom portfolio and booking-forward digital experience for a tattoo and art brand, designed to feel immersive, editorial, and conversion-aware.',
