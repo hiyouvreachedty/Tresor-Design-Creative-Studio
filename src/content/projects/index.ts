@@ -90,8 +90,11 @@ export const projects: Project[] = [
     year: '2022',
     focus: 'Content, PR & Campaign Support',
     images: [
-      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80',
+      '/images/highkey-agency/IMG_3285.PNG',
+      '/images/highkey-agency/IMG_3286.PNG,,
+      'public/images/highkey-agency/IMG_3284.jpg',
+      'public/images/highkey-agency/IMG_3280.jpg',
+      '
     ],
     description:
       'Worked across social content, press releases, and brand strategy for multiple client accounts in a fast-moving agency environment.',
@@ -101,5 +104,6 @@ export const projects: Project[] = [
       'Helped drive measurable traffic growth across client work.',
     ],
     url: 'https://highkeyagency.com',
+    url: 'https://nanonuclearenergy.com/in-the-media-2024/',
   },
 ];
