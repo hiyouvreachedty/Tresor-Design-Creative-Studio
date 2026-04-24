@@ -68,9 +68,7 @@ export const projects: Project[] = [
     focus: 'SEO Strategy, Content Marketing & Digital Growth',
     images: [
       '/images/cism-latin-america/cism-logo.jpeg',
-      '/images/cism-latin-america/cism-home.jpeg',
       '/images/cism-latin-america/cism-hero.jpeg',
-      '/images/cism-latin-america/cism-footer.png',
       '/images/cism-latin-america/cism-mockup.jpeg',
     ],
     description:
