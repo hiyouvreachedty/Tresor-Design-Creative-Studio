@@ -126,6 +126,5 @@ export const projects: Project[] = [
     'Maintained brand consistency across launch-focused creative assets and post themes.',
   ],
   url: '//https://www.particlecollection.com/',
-  url: 'https://www.instagram.com/particlecollection/',
 }
 ];
