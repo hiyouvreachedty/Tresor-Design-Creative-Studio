@@ -104,4 +104,25 @@ export const projects: Project[] = [
     ],
     url: 'https://highkeyagency.com',
   },
+  {
+    id: 5,
+    name: 'Particle Collection',
+    type: 'Graphic Design / Video Editing',
+    year: '2021 - 2022',
+    focus: 'Launch Campaign Creative',
+    images: [
+      '/images/particle-collection/PC-fulllogo.jpeg',
+      '/images/particle-collection/pC_logo.jpg',
+      '/images/particle-collection/PC-GALLERYIMG02.jpg',
+      '/images/particle-collection/PC-GALLERYIMG.jpg',
+    ],
+    description:
+      'Contributed graphic design and video editing work for Particle Collection, supporting social promotion around the Banksy NFT launch. Developed visual content that helped establish a cohesive campaign look across posts, reels, and branded social assets.',
+    highlights: [
+      'Created campaign visuals for a high-profile NFT and digital art promotion.',
+      'Produced edited reel and motion content tailored for social media engagement.',
+      'Maintained brand consistency across launch-focused creative assets and post themes.',
+    ],
+    url: 'https://www.particlecollection.com/',
+  },
 ];
