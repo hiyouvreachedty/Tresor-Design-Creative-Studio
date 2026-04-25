@@ -94,7 +94,6 @@ export const projects: Project[] = [
       '/images/highkey-agency/IMG_3286.PNG',
       '/images/highkey-agency/IMG_3284.jpg',
       '/images/highkey-agency/IMG_3280.jpg',
-      '
     ],
     description:
       'Worked across social content, press releases, and brand strategy for multiple client accounts in a fast-moving agency environment.',
@@ -118,12 +117,12 @@ export const projects: Project[] = [
       '/images/particle-collection/PC-GALLERYIMG.jpg',
     ],
     description:
-    'Contributed graphic design and video editing work for Particle Collection, supporting social promotion around the Banksy NFT launch. Developed visual content that helped establish a cohesive campaign look across posts, reels, and branded social assets.',
+      'Contributed graphic design and video editing work for Particle Collection, supporting social promotion around the Banksy NFT launch. Developed visual content that helped establish a cohesive campaign look across posts, reels, and branded social assets.',
     highlights: [
-    'Created campaign visuals for a high-profile NFT and digital art promotion.',
-    'Produced edited reel and motion content tailored for social media engagement.',
-    'Maintained brand consistency across launch-focused creative assets and post themes.',
+      'Created campaign visuals for a high-profile NFT and digital art promotion.',
+      'Produced edited reel and motion content tailored for social media engagement.',
+      'Maintained brand consistency across launch-focused creative assets and post themes.',
     ],
-    url: '//https://www.particlecollection.com/',
-  }
-  ];
+    url: 'https://www.particlecollection.com/',
+  },
+];
