@@ -91,10 +91,9 @@ export const projects: Project[] = [
     focus: 'Content, PR & Campaign Support',
     images: [
       '/images/highkey-agency/IMG_3285.PNG',
-      '/images/highkey-agency/IMG_3286.PNG,,
+      '/images/highkey-agency/IMG_3286.PNG',
       '/images/highkey-agency/IMG_3284.jpg',
       '/images/highkey-agency/IMG_3280.jpg',
-      '
     ],
     description:
       'Worked across social content, press releases, and brand strategy for multiple client accounts in a fast-moving agency environment.',
@@ -104,6 +103,5 @@ export const projects: Project[] = [
       'Helped drive measurable traffic growth across client work.',
     ],
     url: 'https://highkeyagency.com',
-    url: 'https://nanonuclearenergy.com/in-the-media-2024/',
   },
 ];
