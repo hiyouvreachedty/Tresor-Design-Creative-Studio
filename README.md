@@ -78,8 +78,11 @@ npm run preview
 
 | Project | Description | Stack |
 |---------|-------------|-------|
-| **New Tierra Immigration** | Immigration consultancy website with booking system | React, Tailwind |
-| **Punktured Art** | Tattoo studio portfolio & booking platform | React, Tailwind |
+| **New Tierra Immigration** | Immigration consultancy website with booking system | HTML, JAVASCRIPT, CSS |
+| **Punktured Art** | Tattoo studio portfolio & booking platform | HTML, JAVASCRIPT, CSS, Procreate |
+| **CISM Latin America** | International Online Student Magazine | HTML, JAVASCRIPT, CSS, Photoshop, Figma, Canva |
+| **Punktured Art** | Tattoo studio portfolio & booking platform | HTML, JAVASCRIPT, CSS |
+
 
 ---
 
