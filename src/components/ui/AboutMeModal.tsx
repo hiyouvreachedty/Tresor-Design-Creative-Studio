@@ -67,9 +67,9 @@ const AboutMeModal: React.FC<AboutMeModalProps> = ({ onClose }) => {
             </DataField>
 
             <DataField title="Career Highlights">
-              <p>&gt; 2022 Commonwealth Games — IT Support Manager</p>
+              <p>&gt; 2022 Commonwealth Games — IT Support Services Manager</p>
               <p>&gt; HighKey Agency — Top Press Manager</p>
-              <p>&gt; 2× Silver Medalist (Boxing Team Canada)</p>
+              <p>&gt; National Silver Medalist (Boxing Team Canada)</p>
               <p>&gt; 2016 Olympic Alternate</p>
             </DataField>
           </div>

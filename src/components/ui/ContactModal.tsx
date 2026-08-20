@@ -148,7 +148,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
                 </div>
                 <div className="flex justify-end pt-4">
                   <button type="submit" className="bg-transparent text-[var(--color-neon-green)] px-8 py-3 font-bold text-sm transition-colors duration-300 border border-[var(--color-neon-green)] hover:bg-[var(--color-neon-green)] hover:text-black hover:shadow-[0_0_15px_var(--color-neon-green)] font-mono">
-                    SEND TRANSMISSION
+                    SEND MESSAGE
                   </button>
                 </div>
               </form>

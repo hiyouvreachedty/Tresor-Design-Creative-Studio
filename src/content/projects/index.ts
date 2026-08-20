@@ -20,6 +20,31 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    name: 'Real Estate Website Redesign',
+    type: 'Branding / Web Design / Web Development / UX / SEO',
+    year: '2026',
+    focus: 'Real estate website redesign for a real estate agent, focusing on user experience, property showcase, and lead generation.',
+    images: [
+    '/images/KB-Realestate-website/Desktop-Home.jpeg',
+    '/images/KB-Realestate-website/Desktop-CTA.jpeg',
+    '/images/KB-Realestate-website/Desktop-Guides.jpeg',
+    '/images/KB-Realestate-website/Mobile-Home.jpeg',
+    '/images/KB-Realestate-website/Mobile-CTA.jpeg',
+    '/images/KB-Realestate-website/Mobile-Footer.jpeg',
+    '/images/KB-Realestate-website/Mobile-Reviews.jpeg',
+    '/images/KB-Realestate-website/MobileMenu.jpeg',
+],
+    description:
+      'A conversion-focused real estate website designed to make property discovery, local expertise, and client inquiries feel clear and straightforward.',
+    highlights: [
+      'Realtor based website showcasing Realtors extensive experience and property listings.',
+      'Focused on visual storytelling, navigation clarity, and appointment intent.',
+      'Designed to showcase artwork while supporting client trust and inquiry flow.',
+    ],
+    url: 'https://kaleblakely.com',
+  },
+  {
+    id: 2,
     name: 'Punktured Art',
     type: 'Branding / Web Design',
     year: '2025',
@@ -32,7 +57,7 @@ export const projects: Project[] = [
       '/images/punktured-art/PA-PS.jpg',
     ],
     description:
-      'A custom portfolio and booking-forward digital experience for a tattoo and art brand, designed to feel immersive, editorial, and conversion-aware.',
+      'A custom portfolio and  booking-forward digital experience for a tattoo and art brand, designed to feel immersive, editorial, and conversion-aware.',
     highlights: [
       'Built a distinct digital identity for a tattoo and art studio brand.',
       'Focused on visual storytelling, navigation clarity, and appointment intent.',
@@ -41,7 +66,7 @@ export const projects: Project[] = [
     url: 'https://punkturedart.com',
   },
   {
-    id: 2,
+    id: 3,
     name: 'New Tierra Immigration',
     type: 'Web Design / Brand Presence',
     year: '2024',
@@ -60,10 +85,10 @@ export const projects: Project[] = [
       'Balanced professionalism with accessibility for prospective clients.',
       'Structured pages to support credibility and conversion.',
     ],
-    url: 'https://newtierraimmigration.ca/',
+      url: 'https://newtierraimmigration.ca/',
   },
   {
-    id: 3,
+    id: 4,
     name: 'CISM Latin America',
     type: 'UI / UX',
     year: '2023 | 24',
@@ -84,7 +109,7 @@ export const projects: Project[] = [
     url: 'https://mycism.com',
   },
   {
-    id: 4,
+    id: 5,
     name: 'HighKey Agency',
     type: 'Marketing / Brand Strategy',
     year: '2022',
@@ -105,7 +130,7 @@ export const projects: Project[] = [
     url: 'https://highkeyagency.com',
   },
   {
-    id: 5,
+    id: 6,
     name: 'Particle Collection',
     type: 'Graphic Design / Video Editing',
     year: '2021 - 2022',
