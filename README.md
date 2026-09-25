@@ -26,8 +26,9 @@ Tresor-Design-Creative-Studio/
 ├── public/
 │   └── images/
 │       └── projects/             # Project showcase images
-│           ├── tierra-immigration/
+│           ├── New-tierra-immigration/
 │           └── punktured-art/
+│           └── Kale-blakely-realestate/
 │           └── cism-latinamerica/
 │           └── Highkeyagency/
 ├── src/
